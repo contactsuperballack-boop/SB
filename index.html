@@ -87,8 +87,9 @@ nav a.cta:hover{background:var(--amber-d);color:#0b1513}
 @media(max-width:600px){.packs{grid-template-columns:1fr}.price{text-align:left}}
 .packs>li{background:#0e0e0d;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14px}
 .packs>li b{display:block;font-size:14px}.packs>li span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
-.packs .wide{grid-column:1/-1}.packs ul{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:6px}
-.packs ul li{font-size:12px;color:var(--text);background:rgba(124,186,179,.1);border-radius:8px;padding:4px 10px}
+.packs .wide{grid-column:1/-1}.packs ul{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:600px){.packs ul{grid-template-columns:1fr}}
+.packs ul li{background:rgba(124,186,179,.07);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--muted)}.packs ul li b{color:var(--text);font-size:13px}
 .steps{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
 @media(max-width:600px){.steps{grid-template-columns:1fr}}
 .step{padding:20px}
@@ -192,15 +193,15 @@ footer a{text-decoration:underline;text-underline-offset:3px}
       <div class="shop-head"><div><h3>The Skill Library</h3><p>Ready-to-use skills for building, branding, film, search, ads and marketing, in one collection.</p></div><div class="price"><b>$9.99</b><span>one-time payment</span></div></div>
       <ul class="packs">
         <li class="wide"><b>Engineering Toolkit</b><span>For software developers.</span>
-          <ul><li>Security & Tech Audit</li><li>Senior Debugger</li><li>Performance Optimizer</li><li>Architecture Build</li><li>SEO Optimization</li><li>UI & UX</li></ul></li>
-        <li><b>Branding Skills</b><span>Brand strategy and identity.</span></li>
-        <li><b>Cinematic Product Film</b><span>Product films with a cinematic look.</span></li>
-        <li><b>GEO</b><span>Generative Engine Optimization, for AI search visibility.</span></li>
-        <li><b>Premium Ads & UGC</b><span>Polished ads and creator-style content.</span></li>
-        <li class="wide"><b>Marketing Skills</b><span>Positioning, campaigns and growth.</span></li>
+          <ul><li><b>Security & Tech Audit</b>Reviews code and systems for vulnerabilities and technical risk, with prioritised fixes.</li><li><b>Senior Debugger</b>Traces bugs to the root cause and proposes the smallest safe fix.</li><li><b>Performance Optimizer</b>Finds slow code and heavy pages, then speeds them up.</li><li><b>Architecture Build</b>Plans and structures a system before you build it.</li><li><b>SEO Optimization</b>Improves titles, content and structure for search.</li><li><b>UI & UX</b>Reviews and improves layouts, flows and usability.</li></ul></li>
+        <li><b>Branding Skills</b><span>Positioning, voice and visual identity for a brand that holds together.</span></li>
+        <li><b>Cinematic Product Film</b><span>Plans cinematic product films, from concept to shot list.</span></li>
+        <li><b>GEO</b><span>Generative Engine Optimization: makes pages easier for AI search to find, understand and cite.</span></li>
+        <li><b>Premium Ads & UGC</b><span>Premium ad creative and authentic creator-style (UGC) content.</span></li>
+        <li class="wide"><b>Marketing Skills</b><span>Strategy, campaigns and copy that drive growth.</span></li>
       </ul>
-      <a class="btn primary" id="buy" href="https://wa.me/2348102037871?text=Hi%2C%20I%27d%20like%20to%20buy%20the%20Skill%20Library%20(%249.99)." target="_blank" rel="noopener">Request the Skill Library · $9.99</a>
-      <p class="note" style="margin-top:12px">Delivered digitally after purchase. See the <a href="terms.html#digital">Terms</a>. Payment is handled by the checkout provider, never stored on this site.</p>
+      <a class="btn primary" id="buy" href="https://paystack.com/buy/skill-library-yyfdlo" target="_blank" rel="noopener">Buy now · $9.99</a>
+      <p class="note" style="margin-top:12px">Instant download after payment: one .zip, organised by collection, with a short guide to using the skills. See the <a href="terms.html#digital">Terms</a>. Secure payment is handled by Paystack and card details are never stored on this site.</p>
     </div>
   </section>
 
@@ -257,8 +258,8 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 
 <script>
 // Enquiries post to Formspree. If this is left empty, the form falls back to the visitor's email app.
-// Paste your checkout link (Paystack, Flutterwave, Lemon Squeezy, Gumroad, Polar...) here to turn the button into a real "Buy now".
-const CHECKOUT_URL='';
+// Paystack product link for the Skill Library. Replace it here if the link ever changes.
+const CHECKOUT_URL='https://paystack.com/buy/skill-library-yyfdlo';
 if(CHECKOUT_URL){const b=document.getElementById('buy');b.href=CHECKOUT_URL;b.textContent='Buy now · $9.99'}
 const FORM_ENDPOINT='https://formspree.io/f/xyewkbdo';
 const TO='Contact.superballack@gmail.com';
